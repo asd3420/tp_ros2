@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# author : GOOLJAR Akash
+
 import rospy
 from geometry_msgs.msg import Twist
 import sys
@@ -14,9 +14,7 @@ def turtle_circle(radius):
 
     spawner = rospy.ServiceProxy('spawn', turtlesim.srv.Spawn)
     spawner(4, 2, 0, 'turtle2')
-
     rate = rospy.Rate(10)
-
     vel = Twist()
 
     while not rospy.is_shutdown():
